@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	gap: 5px;
+	color: var(--secondary-text);
+}
+.stops {
+	padding: 0.2em 1em 0.2em 1.5em;
+	border-bottom: 1px solid var(--border-color);
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 0.8em;
+}
+.plane {
+	width: 18px;
+	height: 18px;
+	position: relative;
+	bottom: -15px;
+}

@@ -1,0 +1,45 @@
+.ticket {
+	display: flex;
+
+	background-color: var(--background-box);
+	border-radius: 0 0.5em;
+}
+.salesblock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1em;
+	padding: 1.5em 1em;
+	position: relative;
+	&::after {
+		content: '';
+		background: var(--border-color);
+		height: 100%;
+		width: 1px;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+}
+.image {
+	width: 70%;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	justify-content: start;
+	gap: 0.5em;
+	width: 85%;
+	padding: 1rem 0;
+}
+
+.row {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+}
+
+.airport {
+	padding: 0 1.5em;
+}
