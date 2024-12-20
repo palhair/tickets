@@ -11,7 +11,6 @@ type Props = {
 };
 export const CurrencyButton = memo(({ title, onclick, position = 'middle' }: Props) => {
 	const currency = useAppSelector((state) => state.ticketListState.currency);
-	console.log('render', { title });
 	return (
 		<button
 			className={cn(

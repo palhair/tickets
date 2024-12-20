@@ -21,6 +21,11 @@ interface Props {
 	price: number;
 }
 
+const currncyIcon: Record<Currency, '₽' | '$' | '€'> = {
+	RUB: '₽',
+	USD: '$',
+	EUR: '€',
+};
 export const Ticket = ({
 	origin,
 	origin_name,
@@ -34,21 +39,6 @@ export const Ticket = ({
 	price,
 }: Props) => {
 	const currency = useAppSelector((state) => state.ticketListState.currency);
-	console.log('render', stops);
-	let icon = '';
-	switch (currency) {
-		case Currency.RUB:
-			icon = '₽';
-			break;
-		case Currency.USD:
-			icon = '$';
-			break;
-		case Currency.EUR:
-			icon = '€';
-			break;
-		default:
-			icon = '₽';
-	}
 
 	return (
 		<li className={styles.ticket}>
@@ -57,7 +47,7 @@ export const Ticket = ({
 					className={styles.image}
 					src={logo}
 				/>
-				<Button title={`Купить\nза ${Math.round(price)}${icon}`} />
+				<Button title={`Купить\nза ${Math.round(price)}${currncyIcon[currency]}`} />
 			</div>
 
 			<div className={styles.info}>

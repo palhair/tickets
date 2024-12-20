@@ -5,6 +5,7 @@ import data from '../data/tickets.json';
 const sortedList = data.tickets.sort((a, b) => a.price - b.price).map((ticket) => ({ ...ticket, id: nanoid() }));
 
 export interface ITicket {
+	id: string;
 	origin: string;
 	origin_name: string;
 	destination: string;
