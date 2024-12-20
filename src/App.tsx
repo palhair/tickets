@@ -26,7 +26,7 @@ function App() {
 	return (
 		<div className='container'>
 			<Header />
-			<div className='temp'>
+			<div className='wrap'>
 				<Main>
 					<TicketsList list={tickets} />
 				</Main>

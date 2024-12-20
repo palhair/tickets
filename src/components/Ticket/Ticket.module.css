@@ -43,3 +43,26 @@
 .airport {
 	padding: 0 1.5em;
 }
+
+@media (max-width: 577px) {
+	.ticket {
+		flex-direction: column;
+	}
+	.info {
+		width: 100%;
+	}
+	.salesblock {
+		&::before {
+			content: '';
+			background: var(--border-color);
+			height: 1px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+		}
+		&::after {
+			width: 0;
+			height: 0;
+		}
+	}
+}

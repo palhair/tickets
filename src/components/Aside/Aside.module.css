@@ -6,3 +6,9 @@
 	background-color: var(--background-box);
 	padding: 2em 0;
 }
+
+@media (max-width: 577px) {
+	.aside {
+		width: 365px;
+	}
+}

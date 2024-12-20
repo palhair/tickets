@@ -75,8 +75,25 @@ body {
 	flex-direction: column;
 	align-items: center;
 }
-.temp {
+.wrap {
 	display: flex;
 	flex-direction: row-reverse;
 	gap: 1.5em;
+	align-items: start;
+}
+
+@media (max-width: 1025px) {
+	.wrap {
+		flex-direction: column-reverse;
+		align-items: center;
+	}
+	body {
+		font-size: 14px;
+	}
+}
+
+@media (max-width: 577px) {
+	body {
+		font-size: 14px;
+	}
 }
