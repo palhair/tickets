@@ -26,6 +26,7 @@ const currncyIcon: Record<Currency, '₽' | '$' | '€'> = {
 	USD: '$',
 	EUR: '€',
 };
+
 export const Ticket = ({
 	origin,
 	origin_name,
@@ -44,6 +45,7 @@ export const Ticket = ({
 		<li className={styles.ticket}>
 			<div className={styles.salesblock}>
 				<img
+					alt='авиакомпания'
 					className={styles.image}
 					src={logo}
 				/>

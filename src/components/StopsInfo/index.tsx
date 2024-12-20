@@ -4,21 +4,21 @@ import plane from '../../assets/plane.png';
 type Props = {
 	stops: number;
 };
+
 export const StopsInfo = ({ stops }: Props) => {
-	let stopTitle = '';
-	if (stops == 0) {
-		stopTitle = 'пересадок';
-	} else if (stops == 1) {
-		stopTitle = 'пересадка';
-	} else {
-		stopTitle = 'пересадки';
-	}
+	const stopTitleMap: Record<number, string> = {
+		0: 'пересадок',
+		1: 'пересадка',
+	};
+	const stopTitle = stopTitleMap[stops] || 'пересадки';
+
 	return (
 		<div className={styles.container}>
 			<div className={styles.stops}>
 				{stops} {stopTitle}
 			</div>
 			<img
+				alt='plane'
 				className={styles.plane}
 				src={plane}
 			/>

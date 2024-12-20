@@ -9,6 +9,7 @@ type Props = {
 	onclick: (name: Currency) => void;
 	position?: 'left' | 'middle' | 'right';
 };
+
 export const CurrencyButton = memo(({ title, onclick, position = 'middle' }: Props) => {
 	const currency = useAppSelector((state) => state.ticketListState.currency);
 	return (

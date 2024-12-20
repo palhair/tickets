@@ -8,6 +8,7 @@ type Props = {
 	resetAll?: (name: string) => void;
 	label: string;
 };
+
 export const CheckBox = memo(({ name, checked, onchange, resetAll, label }: Props) => {
 	return (
 		<div className={styles.container}>

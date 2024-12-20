@@ -6,7 +6,7 @@ import styles from './StopsFilter.module.css';
 
 export const StopsFilter = () => {
 	const [all, setAll] = useState(false);
-	const dispath = useAppDispatch();
+	const dispatch = useAppDispatch();
 	const stops = useAppSelector((state) => state.ticketListState.filterStatus);
 
 	useEffect(() => {
@@ -17,21 +17,27 @@ export const StopsFilter = () => {
 		}
 	}, [stops]);
 
-	const handleChangeStops = useCallback((name: string) => {
-		if (name == 'all') {
-			dispath(resetFilter());
-			return;
-		}
-		dispath(setFilter(Number(name)));
-	}, []);
+	const handleChangeStops = useCallback(
+		(name: string) => {
+			if (name == 'all') {
+				dispatch(resetFilter());
+				return;
+			}
+			dispatch(setFilter(Number(name)));
+		},
+		[dispatch]
+	);
 
 	const handlePickAll = useCallback(() => {
-		dispath(resetFilter());
-	}, []);
+		dispatch(resetFilter());
+	}, [dispatch]);
 
-	const handlerPickOnly = useCallback((name: string) => {
-		dispath(pickOnlyCurrent(Number(name)));
-	}, []);
+	const handlerPickOnly = useCallback(
+		(name: string) => {
+			dispatch(pickOnlyCurrent(Number(name)));
+		},
+		[dispatch]
+	);
 
 	return (
 		<div className={styles.container}>

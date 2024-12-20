@@ -1,6 +1,6 @@
 import { ReactElement } from 'react';
-
 import styles from './Aside.module.css';
+
 interface Props {
 	children?: ReactElement[];
 }

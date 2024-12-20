@@ -4,11 +4,14 @@ import { CurrencyButton } from '../CurrencyButton';
 import { useCallback } from 'react';
 
 export const SelectCurrency = () => {
-	const dispath = useAppDispatch();
+	const dispatch = useAppDispatch();
 
-	const handleChangeCurrency = useCallback((name: Currency) => {
-		dispath(changeCurrency(name));
-	}, []);
+	const handleChangeCurrency = useCallback(
+		(name: Currency) => {
+			dispatch(changeCurrency(name));
+		},
+		[dispatch]
+	);
 
 	return (
 		<>

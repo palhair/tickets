@@ -1,4 +1,5 @@
 import styles from './AirportInfo.module.css';
+
 type Props = {
 	id: string;
 	name: string;

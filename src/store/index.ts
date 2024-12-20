@@ -3,9 +3,6 @@ import { configureStore } from '@reduxjs/toolkit';
 import ticketListReducer from './TicketListState';
 import { useDispatch, useSelector } from 'react-redux';
 
-export interface Root {
-	tickets: ITicket[];
-}
 export interface ITicket {
 	origin: string;
 	origin_name: string;
@@ -18,10 +15,6 @@ export interface ITicket {
 	carrier: string;
 	stops: number;
 	price: number;
-}
-
-export interface IStoreState {
-	ticketsList: ITicket[];
 }
 
 const store = configureStore({

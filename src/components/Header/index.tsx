@@ -5,6 +5,7 @@ export const Header = () => {
 	return (
 		<header className={styles.header}>
 			<img
+				alt='logo'
 				className={styles.logo}
 				src={icon}
 			/>

@@ -5,6 +5,7 @@ import styles from './TicketList.module.css';
 type Props = {
 	list: ITicket[];
 };
+
 export const TicketsList = ({ list }: Props) => {
 	return (
 		<ul className={styles.list}>
